@@ -3,11 +3,13 @@
 'use strict'
 
 const _ = require('lodash')
-const JiraClient = require('jira-client')
 const { exec } = require('child_process')
 const Promise = require('bluebird')
 const path = require('path')
 const homedir = require('os').homedir()
+const fs = require('fs')
+const read = require('util').promisify(require('read'))
+const jiraApi = require('./jiraApi')
 const args = require('yargs')
   .options({
     allBranches: { alias: 'a', type: 'boolean', description: 'Show info for all branches in current git' },
@@ -17,23 +19,36 @@ const args = require('yargs')
   .help()
   .argv
 
-const loadSettings = () => {
-  try {
-    return require(path.resolve(homedir, 'jiracli.config.js'))
-  } catch (error) {
-    console.error('Please create ~/jiracli.config.js file with { host, username, password } for your JIRA service')
-    process.exit(1)
-  }
-}
-
-const { host, username, password } = loadSettings()
-const jira = new JiraClient({ protocol: 'https', apiVersion: '2', strictSSL: true, host, username, password });
+const configFilePath = path.resolve(homedir, 'gijit.config.js')
 const paths = {
   summary: 'fields.summary',
   status: 'fields.status.name',
   assignee: 'fields.assignee.displayName',
   project: 'fields.project.name',
   priority: 'fields.priority.name'
+}
+
+const initialize = async (isReattempt) => {
+  if (!isReattempt) console.log(`Setup Gijit\nThis will create a file ${configFilePath}`)
+  const host = await read({ prompt: 'host (e.g. myteam.atlassian.net)' })
+  const username = await read({ prompt: 'username' })
+  const password = await read({ prompt: 'password', silent: true })
+  if (host && username && password) {
+    fs.writeFileSync(configFilePath, `module.exports=${JSON.stringify({ host, username, password })}`)
+    console.log(`Successfully created ${configFilePath}`)
+    return { host, username, password }
+  } else {
+    console.error('Invalid credentials, please try again')
+    return initialize(true)
+  }
+}
+
+const loadSettings = async () => {
+  try {
+    return require(configFilePath)
+  } catch (error) {
+    return initialize()
+  }
 }
 
 const runCommand = async cmd => new Promise((resolve, reject) =>
@@ -46,7 +61,8 @@ const columnLeft = (string, width, padFn = _.padEnd) =>
 
 const logIssue = (issue, branchName) => {
   const { summary, status, assignee, priority } = _.mapValues(paths, p => _.get(issue, p, 'N/A'))
-  const idLength = (branchName || issue.key).length
+  const key = _.get(issue, 'key', branchName)
+  const idLength = _.size(branchName || key)
   const separator = '  '
   const statusLength = 12
   const assigneeLength = 12
@@ -54,7 +70,7 @@ const logIssue = (issue, branchName) => {
   const sepLength = 4 * separator.length
   const summarylength = process.stdout.columns - idLength - statusLength - assigneeLength - priorityLength - sepLength
   console.log([
-    branchName || issue.key,
+    branchName || key,
     columnLeft(summary, summarylength),
     columnLeft(status, statusLength),
     columnLeft(assignee, assigneeLength),
@@ -67,12 +83,12 @@ const logError = (error, prefix = '') => {
   console.error(`${prefix}${prefix ? ' ' : ''}{ error } ${message}`)
 }
 
-const fetchIssue = id => {
-  const matches = id.match(/(\w+-)*(\d{1,})/)
+const fetchIssue = issueKey => {
+  const matches = issueKey.match(/(\w+-)*(\d{1,})/)
   if (matches) {
     const [, issueTag, issueNumber] = matches
     if (issueTag && issueNumber) {
-      return jira.findIssue(`${issueTag}${issueNumber}`, '', _.keys(paths).join())
+      return jiraApi.client.findIssue(`${issueTag}${issueNumber}`, '', _.keys(paths).join())
     }
   }
 }
@@ -105,6 +121,8 @@ const showAllBranches = async () => {
 const showCurrentBranch = async () => showIssue(await runCommand('git rev-parse --abbrev-ref HEAD'))
 
 const main = async () => {
+  const { host, username, password } = await loadSettings()
+  jiraApi.init(host, username, password)
   if (args.issueKey) return showIssue(args.issueKey)
   if (args.allBranches) return showAllBranches()
   return showCurrentBranch()
