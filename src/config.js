@@ -16,7 +16,7 @@ module.exports = _.defaultsDeep(configData.config, {
     summary: { width: 80 },
     issuetype: { color: "cyan" },
     priority: { color: "magenta" },
-    status: { color: "gray" },
+    status: { color: "dim" },
     project: {},
     assignee: { color: "blue" },
     reporter: { color: "green" },
