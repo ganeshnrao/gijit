@@ -4,7 +4,8 @@ module.exports = {
     commonjs: true,
     es6: true
   },
-  extends: "eslint:recommended",
+  extends: ["eslint:recommended", "prettier"],
+  plugins: ['prettier'],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly",
@@ -15,5 +16,7 @@ module.exports = {
     ecmaVersion: 2018
   },
   rules: {
+    'prettier/prettier': ['error'],
+    "no-console": "off"
   }
 };
