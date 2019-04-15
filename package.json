@@ -2,7 +2,7 @@
   "name": "gijit",
   "version": "2.0.0",
   "description": "Show JIRA information for git branches",
-  "main": "index.js",
+  "main": "gijit.js",
   "scripts": {
     "lint": "eslint . --fix"
   },
@@ -32,7 +32,7 @@
     "yargs": "^12.0.2"
   },
   "bin": {
-    "gijit": "./index.js"
+    "gijit": "./gijit.js"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
