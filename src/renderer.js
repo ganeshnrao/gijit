@@ -107,7 +107,7 @@ const fields = {
       return _.map(comment.comments, comment => {
         const author = chalk.bold(_.get(comment, "author.name", ""));
         const updated = chalk.gray(`(${comment.updated})`);
-        const { body } = comment;
+        const body = comment.body.replace(/\r/g, "");
         const commentString = `${author} ${updated}\n${body}`;
         return detailWrapFn(commentString);
       }).join("\n\n");
