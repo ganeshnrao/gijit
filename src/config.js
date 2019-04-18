@@ -36,5 +36,22 @@ module.exports = _.defaultsDeep(configData.config, {
     "assignee",
     "creator",
     "labels"
+  ],
+  detailFields: [
+    "key",
+    "summary",
+    "issuetype",
+    "priority",
+    "status",
+    "project",
+    "environment",
+    "assignee",
+    "reporter",
+    "creator",
+    "updated",
+    "created",
+    "labels",
+    "description",
+    "comment"
   ]
 });

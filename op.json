@@ -1,0 +1,600 @@
+[
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys",
+    "self": "https://truvalue.atlassian.net/rest/api/2/project/11200",
+    "id": "11200",
+    "key": "HSB",
+    "name": "Historical Stories Board",
+    "avatarUrls": {
+      "48x48": "https://truvalue.atlassian.net/secure/projectavatar?avatarId=10803",
+      "24x24": "https://truvalue.atlassian.net/secure/projectavatar?size=small&s=small&avatarId=10803",
+      "16x16": "https://truvalue.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&avatarId=10803",
+      "32x32": "https://truvalue.atlassian.net/secure/projectavatar?size=medium&s=medium&avatarId=10803"
+    },
+    "projectTypeKey": "software",
+    "simplified": false,
+    "style": "classic",
+    "isPrivate": false,
+    "boards": {
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 1,
+      "isLast": true,
+      "values": [
+        {
+          "id": 29,
+          "self": "https://truvalue.atlassian.net/rest/agile/1.0/board/29",
+          "name": "HSB board",
+          "type": "scrum",
+          "location": {
+            "projectId": 11200,
+            "displayName": "Historical Stories Board (HSB)",
+            "projectName": "Historical Stories Board",
+            "projectKey": "HSB",
+            "projectTypeKey": "software",
+            "avatarURI": "/secure/projectavatar?size=small&s=small&avatarId=10803",
+            "name": "Historical Stories Board (HSB)"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys",
+    "self": "https://truvalue.atlassian.net/rest/api/2/project/11300",
+    "id": "11300",
+    "key": "DA",
+    "name": "Data Analytics",
+    "avatarUrls": {
+      "48x48": "https://truvalue.atlassian.net/secure/projectavatar?pid=11300&avatarId=11600",
+      "24x24": "https://truvalue.atlassian.net/secure/projectavatar?size=small&s=small&pid=11300&avatarId=11600",
+      "16x16": "https://truvalue.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&pid=11300&avatarId=11600",
+      "32x32": "https://truvalue.atlassian.net/secure/projectavatar?size=medium&s=medium&pid=11300&avatarId=11600"
+    },
+    "projectTypeKey": "software",
+    "simplified": false,
+    "style": "classic",
+    "isPrivate": false,
+    "boards": {
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 1,
+      "isLast": true,
+      "values": [
+        {
+          "id": 34,
+          "self": "https://truvalue.atlassian.net/rest/agile/1.0/board/34",
+          "name": "DA board",
+          "type": "kanban",
+          "location": {
+            "projectId": 11300,
+            "displayName": "Data Analytics (DA)",
+            "projectName": "Data Analytics",
+            "projectKey": "DA",
+            "projectTypeKey": "software",
+            "avatarURI": "/secure/projectavatar?size=small&s=small&pid=11300&avatarId=11600",
+            "name": "Data Analytics (DA)"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys",
+    "self": "https://truvalue.atlassian.net/rest/api/2/project/11301",
+    "id": "11301",
+    "key": "PBA",
+    "name": "PM Board Archive",
+    "avatarUrls": {
+      "48x48": "https://truvalue.atlassian.net/secure/projectavatar?avatarId=10803",
+      "24x24": "https://truvalue.atlassian.net/secure/projectavatar?size=small&s=small&avatarId=10803",
+      "16x16": "https://truvalue.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&avatarId=10803",
+      "32x32": "https://truvalue.atlassian.net/secure/projectavatar?size=medium&s=medium&avatarId=10803"
+    },
+    "projectTypeKey": "software",
+    "simplified": false,
+    "style": "classic",
+    "isPrivate": false,
+    "boards": {
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 1,
+      "isLast": true,
+      "values": [
+        {
+          "id": 35,
+          "self": "https://truvalue.atlassian.net/rest/agile/1.0/board/35",
+          "name": "PM Board Archive",
+          "type": "kanban",
+          "location": {
+            "projectId": 11301,
+            "displayName": "PM Board Archive (PBA)",
+            "projectName": "PM Board Archive",
+            "projectKey": "PBA",
+            "projectTypeKey": "software",
+            "avatarURI": "/secure/projectavatar?size=small&s=small&avatarId=10803",
+            "name": "PM Board Archive (PBA)"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys",
+    "self": "https://truvalue.atlassian.net/rest/api/2/project/11302",
+    "id": "11302",
+    "key": "MBA",
+    "name": "Marketing Board Archive",
+    "avatarUrls": {
+      "48x48": "https://truvalue.atlassian.net/secure/projectavatar?avatarId=10803",
+      "24x24": "https://truvalue.atlassian.net/secure/projectavatar?size=small&s=small&avatarId=10803",
+      "16x16": "https://truvalue.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&avatarId=10803",
+      "32x32": "https://truvalue.atlassian.net/secure/projectavatar?size=medium&s=medium&avatarId=10803"
+    },
+    "projectTypeKey": "software",
+    "simplified": false,
+    "style": "classic",
+    "isPrivate": false,
+    "boards": {
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 1,
+      "isLast": true,
+      "values": [
+        {
+          "id": 36,
+          "self": "https://truvalue.atlassian.net/rest/agile/1.0/board/36",
+          "name": "Marketing Board Archive",
+          "type": "kanban",
+          "location": {
+            "projectId": 11302,
+            "displayName": "Marketing Board Archive (MBA)",
+            "projectName": "Marketing Board Archive",
+            "projectKey": "MBA",
+            "projectTypeKey": "software",
+            "avatarURI": "/secure/projectavatar?size=small&s=small&avatarId=10803",
+            "name": "Marketing Board Archive (MBA)"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys",
+    "self": "https://truvalue.atlassian.net/rest/api/2/project/11303",
+    "id": "11303",
+    "key": "DAAS",
+    "name": "DAAS",
+    "avatarUrls": {
+      "48x48": "https://truvalue.atlassian.net/secure/projectavatar?avatarId=10803",
+      "24x24": "https://truvalue.atlassian.net/secure/projectavatar?size=small&s=small&avatarId=10803",
+      "16x16": "https://truvalue.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&avatarId=10803",
+      "32x32": "https://truvalue.atlassian.net/secure/projectavatar?size=medium&s=medium&avatarId=10803"
+    },
+    "projectTypeKey": "software",
+    "simplified": false,
+    "style": "classic",
+    "isPrivate": false,
+    "boards": {
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 1,
+      "isLast": true,
+      "values": [
+        {
+          "id": 37,
+          "self": "https://truvalue.atlassian.net/rest/agile/1.0/board/37",
+          "name": "DAAS board",
+          "type": "kanban",
+          "location": {
+            "projectId": 11303,
+            "displayName": "DAAS (DAAS)",
+            "projectName": "DAAS",
+            "projectKey": "DAAS",
+            "projectTypeKey": "software",
+            "avatarURI": "/secure/projectavatar?size=small&s=small&avatarId=10803",
+            "name": "DAAS (DAAS)"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys",
+    "self": "https://truvalue.atlassian.net/rest/api/2/project/11304",
+    "id": "11304",
+    "key": "DE",
+    "name": "Data Engineering",
+    "avatarUrls": {
+      "48x48": "https://truvalue.atlassian.net/secure/projectavatar?avatarId=10803",
+      "24x24": "https://truvalue.atlassian.net/secure/projectavatar?size=small&s=small&avatarId=10803",
+      "16x16": "https://truvalue.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&avatarId=10803",
+      "32x32": "https://truvalue.atlassian.net/secure/projectavatar?size=medium&s=medium&avatarId=10803"
+    },
+    "projectTypeKey": "software",
+    "simplified": false,
+    "style": "classic",
+    "isPrivate": false,
+    "boards": {
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 1,
+      "isLast": true,
+      "values": [
+        {
+          "id": 38,
+          "self": "https://truvalue.atlassian.net/rest/agile/1.0/board/38",
+          "name": "DE board",
+          "type": "scrum",
+          "location": {
+            "projectId": 11304,
+            "displayName": "Data Engineering (DE)",
+            "projectName": "Data Engineering",
+            "projectKey": "DE",
+            "projectTypeKey": "software",
+            "avatarURI": "/secure/projectavatar?size=small&s=small&avatarId=10803",
+            "name": "Data Engineering (DE)"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys",
+    "self": "https://truvalue.atlassian.net/rest/api/2/project/10600",
+    "id": "10600",
+    "key": "FRQ",
+    "name": "Feature Request Queue",
+    "avatarUrls": {
+      "48x48": "https://truvalue.atlassian.net/secure/projectavatar?pid=10600&avatarId=10011",
+      "24x24": "https://truvalue.atlassian.net/secure/projectavatar?size=small&s=small&pid=10600&avatarId=10011",
+      "16x16": "https://truvalue.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&pid=10600&avatarId=10011",
+      "32x32": "https://truvalue.atlassian.net/secure/projectavatar?size=medium&s=medium&pid=10600&avatarId=10011"
+    },
+    "projectTypeKey": "software",
+    "simplified": false,
+    "style": "classic",
+    "isPrivate": false,
+    "boards": {
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 1,
+      "isLast": true,
+      "values": [
+        {
+          "id": 17,
+          "self": "https://truvalue.atlassian.net/rest/agile/1.0/board/17",
+          "name": "Feature Request Queue",
+          "type": "kanban",
+          "location": {
+            "projectId": 10600,
+            "displayName": "Feature Request Queue (FRQ)",
+            "projectName": "Feature Request Queue",
+            "projectKey": "FRQ",
+            "projectTypeKey": "software",
+            "avatarURI": "/secure/projectavatar?size=small&s=small&pid=10600&avatarId=10011",
+            "name": "Feature Request Queue (FRQ)"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys",
+    "self": "https://truvalue.atlassian.net/rest/api/2/project/10700",
+    "id": "10700",
+    "key": "TMP",
+    "name": "Twitter Mining Project",
+    "avatarUrls": {
+      "48x48": "https://truvalue.atlassian.net/secure/projectavatar?avatarId=10803",
+      "24x24": "https://truvalue.atlassian.net/secure/projectavatar?size=small&s=small&avatarId=10803",
+      "16x16": "https://truvalue.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&avatarId=10803",
+      "32x32": "https://truvalue.atlassian.net/secure/projectavatar?size=medium&s=medium&avatarId=10803"
+    },
+    "projectTypeKey": "software",
+    "simplified": false,
+    "style": "classic",
+    "isPrivate": false,
+    "boards": {
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 1,
+      "isLast": true,
+      "values": [
+        {
+          "id": 21,
+          "self": "https://truvalue.atlassian.net/rest/agile/1.0/board/21",
+          "name": "Twitter Mining Board",
+          "type": "scrum",
+          "location": {
+            "projectId": 10700,
+            "displayName": "Twitter Mining Project (TMP)",
+            "projectName": "Twitter Mining Project",
+            "projectKey": "TMP",
+            "projectTypeKey": "software",
+            "avatarURI": "/secure/projectavatar?size=small&s=small&avatarId=10803",
+            "name": "Twitter Mining Project (TMP)"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys",
+    "self": "https://truvalue.atlassian.net/rest/api/2/project/10800",
+    "id": "10800",
+    "key": "TP",
+    "name": "ToTheNew Project",
+    "avatarUrls": {
+      "48x48": "https://truvalue.atlassian.net/secure/projectavatar?avatarId=10803",
+      "24x24": "https://truvalue.atlassian.net/secure/projectavatar?size=small&s=small&avatarId=10803",
+      "16x16": "https://truvalue.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&avatarId=10803",
+      "32x32": "https://truvalue.atlassian.net/secure/projectavatar?size=medium&s=medium&avatarId=10803"
+    },
+    "projectTypeKey": "software",
+    "simplified": false,
+    "style": "classic",
+    "isPrivate": false,
+    "boards": {
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 1,
+      "isLast": true,
+      "values": [
+        {
+          "id": 22,
+          "self": "https://truvalue.atlassian.net/rest/agile/1.0/board/22",
+          "name": "ToTheNew board",
+          "type": "scrum",
+          "location": {
+            "projectId": 10800,
+            "displayName": "ToTheNew Project (TP)",
+            "projectName": "ToTheNew Project",
+            "projectKey": "TP",
+            "projectTypeKey": "software",
+            "avatarURI": "/secure/projectavatar?size=small&s=small&avatarId=10803",
+            "name": "ToTheNew Project (TP)"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys",
+    "self": "https://truvalue.atlassian.net/rest/api/2/project/10003",
+    "id": "10003",
+    "key": "TAWA",
+    "name": "Insight360 Web App",
+    "avatarUrls": {
+      "48x48": "https://truvalue.atlassian.net/secure/projectavatar?pid=10003&avatarId=10011",
+      "24x24": "https://truvalue.atlassian.net/secure/projectavatar?size=small&s=small&pid=10003&avatarId=10011",
+      "16x16": "https://truvalue.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&pid=10003&avatarId=10011",
+      "32x32": "https://truvalue.atlassian.net/secure/projectavatar?size=medium&s=medium&pid=10003&avatarId=10011"
+    },
+    "projectTypeKey": "software",
+    "simplified": false,
+    "style": "classic",
+    "isPrivate": false,
+    "boards": {
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 1,
+      "isLast": true,
+      "values": [
+        {
+          "id": 9,
+          "self": "https://truvalue.atlassian.net/rest/agile/1.0/board/9",
+          "name": "Insight360 Web App Story Board",
+          "type": "scrum",
+          "location": {
+            "projectId": 10003,
+            "displayName": "Insight360 Web App (TAWA)",
+            "projectName": "Insight360 Web App",
+            "projectKey": "TAWA",
+            "projectTypeKey": "software",
+            "avatarURI": "/secure/projectavatar?size=small&s=small&pid=10003&avatarId=10011",
+            "name": "Insight360 Web App (TAWA)"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys",
+    "self": "https://truvalue.atlassian.net/rest/api/2/project/10004",
+    "id": "10004",
+    "key": "TVALAN",
+    "name": "TruValue Algos and Analytics",
+    "avatarUrls": {
+      "48x48": "https://truvalue.atlassian.net/secure/projectavatar?pid=10004&avatarId=10501",
+      "24x24": "https://truvalue.atlassian.net/secure/projectavatar?size=small&s=small&pid=10004&avatarId=10501",
+      "16x16": "https://truvalue.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&pid=10004&avatarId=10501",
+      "32x32": "https://truvalue.atlassian.net/secure/projectavatar?size=medium&s=medium&pid=10004&avatarId=10501"
+    },
+    "projectTypeKey": "software",
+    "simplified": false,
+    "style": "classic",
+    "isPrivate": false,
+    "boards": {
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 1,
+      "isLast": true,
+      "values": [
+        {
+          "id": 5,
+          "self": "https://truvalue.atlassian.net/rest/agile/1.0/board/5",
+          "name": "TruValue Algos and Analytics (TVALAN)",
+          "type": "scrum",
+          "location": {
+            "projectId": 10004,
+            "displayName": "TruValue Algos and Analytics (TVALAN)",
+            "projectName": "TruValue Algos and Analytics",
+            "projectKey": "TVALAN",
+            "projectTypeKey": "software",
+            "avatarURI": "/secure/projectavatar?size=small&s=small&pid=10004&avatarId=10501",
+            "name": "TruValue Algos and Analytics (TVALAN)"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys",
+    "self": "https://truvalue.atlassian.net/rest/api/2/project/10901",
+    "id": "10901",
+    "key": "TBP",
+    "name": "TTN Backend Project",
+    "avatarUrls": {
+      "48x48": "https://truvalue.atlassian.net/secure/projectavatar?avatarId=10803",
+      "24x24": "https://truvalue.atlassian.net/secure/projectavatar?size=small&s=small&avatarId=10803",
+      "16x16": "https://truvalue.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&avatarId=10803",
+      "32x32": "https://truvalue.atlassian.net/secure/projectavatar?size=medium&s=medium&avatarId=10803"
+    },
+    "projectTypeKey": "software",
+    "simplified": false,
+    "style": "classic",
+    "isPrivate": false,
+    "boards": {
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 1,
+      "isLast": true,
+      "values": [
+        {
+          "id": 24,
+          "self": "https://truvalue.atlassian.net/rest/agile/1.0/board/24",
+          "name": "TTN Backend board",
+          "type": "scrum",
+          "location": {
+            "projectId": 10901,
+            "displayName": "TTN Backend Project (TBP)",
+            "projectName": "TTN Backend Project",
+            "projectKey": "TBP",
+            "projectTypeKey": "software",
+            "avatarURI": "/secure/projectavatar?size=small&s=small&avatarId=10803",
+            "name": "TTN Backend Project (TBP)"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys",
+    "self": "https://truvalue.atlassian.net/rest/api/2/project/11000",
+    "id": "11000",
+    "key": "PM",
+    "name": "Product Management",
+    "avatarUrls": {
+      "48x48": "https://truvalue.atlassian.net/secure/projectavatar?avatarId=10803",
+      "24x24": "https://truvalue.atlassian.net/secure/projectavatar?size=small&s=small&avatarId=10803",
+      "16x16": "https://truvalue.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&avatarId=10803",
+      "32x32": "https://truvalue.atlassian.net/secure/projectavatar?size=medium&s=medium&avatarId=10803"
+    },
+    "projectTypeKey": "software",
+    "simplified": false,
+    "style": "classic",
+    "isPrivate": false,
+    "boards": {
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 1,
+      "isLast": true,
+      "values": [
+        {
+          "id": 26,
+          "self": "https://truvalue.atlassian.net/rest/agile/1.0/board/26",
+          "name": "PM Board",
+          "type": "kanban",
+          "location": {
+            "projectId": 11000,
+            "displayName": "Product Management (PM)",
+            "projectName": "Product Management",
+            "projectKey": "PM",
+            "projectTypeKey": "software",
+            "avatarURI": "/secure/projectavatar?size=small&s=small&avatarId=10803",
+            "name": "Product Management (PM)"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys",
+    "self": "https://truvalue.atlassian.net/rest/api/2/project/11100",
+    "id": "11100",
+    "key": "DC",
+    "name": "Data and Content",
+    "avatarUrls": {
+      "48x48": "https://truvalue.atlassian.net/secure/projectavatar?avatarId=10803",
+      "24x24": "https://truvalue.atlassian.net/secure/projectavatar?size=small&s=small&avatarId=10803",
+      "16x16": "https://truvalue.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&avatarId=10803",
+      "32x32": "https://truvalue.atlassian.net/secure/projectavatar?size=medium&s=medium&avatarId=10803"
+    },
+    "projectTypeKey": "software",
+    "simplified": false,
+    "style": "classic",
+    "isPrivate": false,
+    "boards": {
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 1,
+      "isLast": true,
+      "values": [
+        {
+          "id": 28,
+          "self": "https://truvalue.atlassian.net/rest/agile/1.0/board/28",
+          "name": "DC board",
+          "type": "kanban",
+          "location": {
+            "projectId": 11100,
+            "displayName": "Data and Content (DC)",
+            "projectName": "Data and Content",
+            "projectKey": "DC",
+            "projectTypeKey": "software",
+            "avatarURI": "/secure/projectavatar?size=small&s=small&avatarId=10803",
+            "name": "Data and Content (DC)"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys",
+    "self": "https://truvalue.atlassian.net/rest/api/2/project/10300",
+    "id": "10300",
+    "key": "MP",
+    "name": "Marketing",
+    "avatarUrls": {
+      "48x48": "https://truvalue.atlassian.net/secure/projectavatar?pid=10300&avatarId=10011",
+      "24x24": "https://truvalue.atlassian.net/secure/projectavatar?size=small&s=small&pid=10300&avatarId=10011",
+      "16x16": "https://truvalue.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&pid=10300&avatarId=10011",
+      "32x32": "https://truvalue.atlassian.net/secure/projectavatar?size=medium&s=medium&pid=10300&avatarId=10011"
+    },
+    "projectTypeKey": "business",
+    "simplified": false,
+    "style": "classic",
+    "isPrivate": false,
+    "boards": {
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 1,
+      "isLast": true,
+      "values": [
+        {
+          "id": 33,
+          "self": "https://truvalue.atlassian.net/rest/agile/1.0/board/33",
+          "name": "Marketing Board",
+          "type": "kanban",
+          "location": {
+            "userId": 10400,
+            "userAccountId": "557058:7c707c05-9164-4161-abdd-f5bbea2a1e12",
+            "displayName": "Mark Strehlow",
+            "avatarURI": "https://avatar-cdn.atlassian.com/db003e76c6ac1ea5a849c21cde28a96c?s=24&d=https%3A%2F%2Ftruvalue.atlassian.net%2Fsecure%2Fuseravatar%3Fsize%3Dsmall%26avatarId%3D10820%26noRedirect%3Dtrue",
+            "name": "Mark Strehlow"
+          }
+        }
+      ]
+    }
+  }
+]

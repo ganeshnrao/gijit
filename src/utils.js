@@ -17,6 +17,10 @@ module.exports = {
     return matches ? matches[0] : null;
   },
 
+  isValidIssueKey(issueKey) {
+    return issueKeyRegex.test(issueKey);
+  },
+
   execute(fn) {
     fn().catch(error => console.error(error.stack) || process.exit(1));
   }
