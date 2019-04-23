@@ -8,4 +8,5 @@ require("commander")
   .command("comment", "Add a new comment, or update existing comment")
   .command("projects", "Show all projects and boards")
   .command("user [name]", "Search users by name")
+  .command("open [key", "Open issue in default browser")
   .parse(process.argv);
