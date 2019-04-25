@@ -1,3 +1,4 @@
+const _ = require("lodash");
 const exec = require("util").promisify(require("child_process").exec);
 
 const issueKeyRegex = /\w+-\d+/gi;
@@ -22,7 +23,26 @@ const utils = {
   },
 
   execute(fn) {
-    fn().catch(error => console.error(error.stack) || process.exit(1));
+    fn().catch(error => {
+      if (error.name === "StatusCodeError") {
+        const {
+          statusCode,
+          options: { method, uri, body },
+          error: { errorMessages = [], warningMessages = [] }
+        } = error;
+        console.log(`[${statusCode}] ${method} ${uri} ${JSON.stringify(body)}`);
+        const prefix = "      ";
+        _.map(errorMessages, message => {
+          console.error(`${prefix}Error: ${message}`);
+        });
+        _.map(warningMessages, message => {
+          console.warn(`${prefix}Warn: ${message}`);
+        });
+      } else {
+        console.error(error.stack);
+      }
+      process.exit(1);
+    });
   },
 
   async getIssueKeyFromArgOrBranch(key) {
