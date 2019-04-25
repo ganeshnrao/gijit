@@ -2,7 +2,7 @@ const exec = require("util").promisify(require("child_process").exec);
 
 const issueKeyRegex = /\w+-\d+/gi;
 
-module.exports = {
+const utils = {
   async run(cmd) {
     const { stdout, stderr } = await exec(cmd);
     if (stderr) {
@@ -23,5 +23,15 @@ module.exports = {
 
   execute(fn) {
     fn().catch(error => console.error(error.stack) || process.exit(1));
+  },
+
+  async getIssueKeyFromArgOrBranch(key) {
+    if (key) {
+      return key;
+    }
+    const branchName = await utils.run("git rev-parse --abbrev-ref HEAD");
+    return utils.branchNameToIssueKey(branchName);
   }
 };
+
+module.exports = utils;
