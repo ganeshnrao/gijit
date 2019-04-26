@@ -26,6 +26,15 @@ function detailWrapFn(value) {
 }
 
 const fields = {
+  id: {
+    path: "id",
+    title: "ID",
+    color: "yellow"
+  },
+  name: {
+    path: "name",
+    title: "Name"
+  },
   key: {
     path: "key",
     color: "bold",
@@ -106,16 +115,43 @@ const fields = {
     transform(comment) {
       return _.map(comment.comments, comment => {
         const author = chalk.bold(_.get(comment, "author.name", ""));
-        const updated = chalk.gray(`(${comment.updated})`);
+        const commentId = chalk.yellow(comment.id);
+        const updated = chalk.dim(comment.updated);
         const body = comment.body.replace(/\r/g, "");
-        const commentString = `${author} ${updated}\n${body}`;
+        const commentString = `${author} ${commentId} ${updated}\n${body}`;
         return detailWrapFn(commentString);
       }).join("\n\n");
+    }
+  },
+  "project/boards": {
+    path: "boards",
+    title: "Boards",
+    transform(boards) {
+      return _.map(boards, ({ id, name }) => {
+        const idColor = getColorFn("id");
+        const nameColor = getColorFn("name");
+        return `${idColor(id)} ${nameColor(name)}`;
+      }).join("\n");
+    }
+  },
+  "user/displayName": {
+    path: "displayName",
+    title: "Display Name"
+  },
+  "user/emailAddress": {
+    path: "emailAddress",
+    title: "Email Address"
+  },
+  "user/status": {
+    path: "active",
+    title: "Status",
+    transform(active) {
+      return active ? "Active" : "Inactive";
     }
   }
 };
 
-function getColorFn(fieldName) {
+function getColorFn(fieldName, fallbackColor) {
   if (!config.colors) {
     return _.identity;
   }
@@ -127,7 +163,8 @@ function getColorFn(fieldName) {
     return chalk[configColor];
   }
   const field = fields[fieldName];
-  return field.color ? chalk[field.color] : _.identity;
+  const fallback = fallbackColor ? chalk[fallbackColor] : _.identity;
+  return field.color ? chalk[field.color] : fallback;
 }
 
 function getWrapFn(fieldName) {
@@ -159,8 +196,8 @@ _.each(fields, (field, name) => {
   field.detail = issue => getDetailItem(issue, name);
 });
 
-function getLineTable(issues) {
-  const lineFields = _.compact(_.map(config.lineFields, name => fields[name]));
+function getLineTable(issues, selectedFields = config.lineFields) {
+  const lineFields = _.compact(_.map(selectedFields, name => fields[name]));
   const table = getTable({ head: _.map(lineFields, "title") });
   _.each(issues, issue => {
     const row = _.map(lineFields, field => field.line(issue));
@@ -169,16 +206,20 @@ function getLineTable(issues) {
   return table;
 }
 
-function getDetailTable(issues) {
-  const table = new Table();
+function getDetailTable(issues, selectedFields = config.detailFields) {
+  const table = getTable();
+  const toShow = selectedFields ? _.pick(fields, selectedFields) : fields;
   _.each(issues, issue => {
-    _.each(fields, field => table.push([field.title, field.detail(issue)]));
+    _.each(toShow, field => {
+      table.push([field.title, field.detail(issue)]);
+    });
   });
   return table;
 }
 
 module.exports = {
   fields,
+  getTable,
   getLineTable,
   getLineItem,
   getDetailTable

@@ -46,6 +46,30 @@ Optionally you can pass a JIRA issue key, e.g. `gijit detail DEV-1234`, and it w
 
 This will return the search results for any JIRA query, for example `gijit search 'assignee=foo.bar and status=open'`
 
+### `gijit open <issueKey>`
+
+This will open the issue corresponding to the current branch in the default browser. If `issueKey` is given it will open that issue in the default browser.
+
+### `gijit comment`
+
+Show comments assocated with current branch
+
+### `gijit comment -i <issueKey>`
+
+Show comments associated with `issueKey`
+
+### `gijit comment -i <issueKey> -m <commentBody>`
+
+Add a comment to issue specified by `issueKey`, if not `-i` is not given then comment will be added to issue related with current branch
+
+### `gijit comment -i <issueKey> -c <commentId> -m <commentBody>`
+
+Replace comment specified by `commentId` with new `commentBody` for `issueKey`
+
+### `gijit user [<query>]`
+
+If no `query` is given show list of all users. If `query` string is provided, show users matching `query` string
+
 ## Customization
 
 You can customize how the items are rendered by editing the `gijit.config.js` file, and add a property called `config`. The following properties are allowed (and are the defaults).

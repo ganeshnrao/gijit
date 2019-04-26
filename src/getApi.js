@@ -12,7 +12,7 @@ const apiSettings = {
   strictSSL: true
 };
 
-const setupConfig = async isReattempt => {
+async function setupConfig(isReattempt) {
   if (!isReattempt) {
     console.log(`\nSetup Gijit\nThis will create a file ${configFilePath}`);
   }
@@ -31,25 +31,25 @@ const setupConfig = async isReattempt => {
     console.error("Invalid credentials, please try again");
     return setupConfig(true);
   }
-};
+}
 
-const getJiraConfig = () => {
+function getJiraConfig() {
   try {
     return require(configFilePath);
   } catch (error) {
     console.log(`Config file does not exist ${configFilePath}`);
     return setupConfig();
   }
-};
+}
 
 let api;
 
-const getApi = async () => {
+async function getApi() {
   if (!api) {
     const { username, host, password } = await getJiraConfig();
     api = new JiraClient({ username, password, host, ...apiSettings });
   }
   return api;
-};
+}
 
 module.exports = getApi;

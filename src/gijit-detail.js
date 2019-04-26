@@ -1,22 +1,14 @@
 const _ = require("lodash");
 const program = require("commander");
 const getApi = require("./getApi");
-const { run, execute, branchNameToIssueKey } = require("./utils");
+const { execute, getKeyArg } = require("./utils");
 const { fields, getDetailTable } = require("./renderer");
 
-async function getKeyArg() {
-  const [key] = program.parse(process.argv).args;
-  if (key) {
-    return key;
-  }
-  const branchName = await run("git rev-parse --abbrev-ref HEAD");
-  return branchNameToIssueKey(branchName);
-}
-
 async function main() {
-  const key = await getKeyArg();
+  const [key] = program.parse(process.argv).args;
+  const issueKey = await getKeyArg(key);
   const api = await getApi();
-  const query = `key=${key}`;
+  const query = `key=${issueKey}`;
   const { issues } = await api.searchJira(query, { fields: _.keys(fields) });
   console.log(getDetailTable(issues).toString());
 }
