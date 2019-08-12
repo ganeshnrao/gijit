@@ -1,6 +1,6 @@
 {
   "name": "gijit",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Show JIRA information for git branches",
   "main": "./src/gijit.js",
   "scripts": {
