@@ -10,7 +10,7 @@ Install Gijit globally with the following.
 $ npm install -g gijit
 ```
 
-The very first time you invoke `gijit` it will ask for your atlassian host, username and password. This information will be stored in your home folder as a file `gijit.config.js`.
+The very first time you invoke `gijit` it will ask for your atlassian host, username and an API Token, which you can obtain by visiting https://id.atlassian.com/manage/api-tokens. This information will be stored in your home folder as a file `gijit.config.js`.
 
 ```
 $ gijit
@@ -79,7 +79,7 @@ You can customize how the items are rendered by editing the `gijit.config.js` fi
 module.exports = {
   host: /* host */,
   username: /* your username */,
-  password: /* your password */,
+  password: /* your API token. To get an API token visit https://id.atlassian.com/manage/api-tokens */,
   config: {
     colors: true, // enable/disable colors
     fields: {
