@@ -14,11 +14,13 @@ const apiSettings = {
 
 async function setupConfig(isReattempt) {
   if (!isReattempt) {
-    console.log(`\nSetup Gijit\nThis will create a file ${configFilePath}`);
+    console.log(
+      `\nSetup Gijit\nThis will create a file ${configFilePath}. Please generate an API Token from https://id.atlassian.com/manage/api-tokens first and have it ready to be pasted in when prompted below.`
+    );
   }
   const host = await read({ prompt: "host (e.g. myteam.atlassian.net)" });
   const username = await read({ prompt: "username" });
-  const password = await read({ prompt: "password", silent: true });
+  const password = await read({ prompt: "API Token", silent: true });
   if (host && username && password) {
     const configData = { host, username, password, config: {} };
     fs.writeFileSync(
